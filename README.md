@@ -54,18 +54,18 @@ I've needed to re-write the assignment a bit to get it to work on this other VM.
   5. hadoop com.sun.tools.javac.Main WordCount.java -d build
   6. jar -cvf WordCount.jar -C build/ ./
   7. test the result (as in the assignment and note change in case) by typeing: hadoop jar WordCount.jar WordCount
- 1. same as original instruction
- 2. create two files in your current directory (no need to with them elsewhere):
-   1.  echo "Hello world in HDFS" > testfile1
-   2.  echo "Hadoop word count example in HDFS" > testfile2
- 1. create a directory for the input to MapReduce on HDFS by typing (_either_ of the folloing will work)
-   1. hdfs dfs -mkdir -p testmr/input
-   2. hadoop fs -mkdir -p testmr/input
- 1. copy these two files to HDFS by typing (either of the next lines will work)
-   1. hdfs dfs -put testfile* testmr/input
-   2. hadoop fs -put testfile* testmr/input
- 1. run the MapReduce program on the input files: hadoop jar WordCount.jar wordcount testmr/input testmr/output
- 2. if successful, you can list the output files: hdfs dfs -ls testmr/output
- 3. check the output: hdfs dfs -cat testmr/output/part*
- 4. put the output in a location. Now we will do this using the browser interface, since we need to get this part* file off the HDFS and onto your local machine. So follow these steps:
-   1. 
+1. same as original instruction
+2. create two files in your current directory (no need to with them elsewhere):
+  *  echo "Hello world in HDFS" > testfile1
+  *  echo "Hadoop word count example in HDFS" > testfile2
+1. create a directory for the input to MapReduce on HDFS by typing (_either_ of the folloing will work)
+  * hdfs dfs -mkdir -p testmr/input
+  * hadoop fs -mkdir -p testmr/input
+1. copy these two files to HDFS by typing (either of the next lines will work)
+  * hdfs dfs -put testfile* testmr/input
+  * hadoop fs -put testfile* testmr/input
+1. run the MapReduce program on the input files: hadoop jar WordCount.jar wordcount testmr/input testmr/output
+2. if successful, you can list the output files: hdfs dfs -ls testmr/output
+3. check the output: hdfs dfs -cat testmr/output/part*
+4. put the output in a location. Now we will do this using the browser interface, since we need to get this part* file off the HDFS and onto your local machine. So follow these steps:
+  * xxx 
