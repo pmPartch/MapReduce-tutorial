@@ -40,3 +40,7 @@ The TCP ports that I had you open in the instance creation steps will allow you 
 * In your browser, type this into your address bar: http://XX.YY.WW.ZZ:8888/ where XX.YY.WW.ZZ is your public IP address of your instance. This should show you the default web page of your instance (as well as links to tutorials and other info). There is also a link to an admin site on the instance (the link with port 8080). This requires a login with user admin and password admin. From this admin site you can access both the local file system and the HDFS file sytem for upload or download. Click on this link now.
 * On the admin site, you will find in the upper right of the page an Admin button and just left of it a little box like button. Hover your mouse over this box like icon and see you have access to the HSFS file system and the instance local file system.
 * You can also get another view of the instance by typeing into the browser address bar: http://XX.YY.WW.ZZ:8000/ where XX.YY.WW.ZZ is your public IP address of your instance. This gives you access to Hue.
+
+## The Big Data Assignment on Hortonworks
+I've needed to re-write the assignment a bit to get it to work on this other VM. I've verified that the output of this set of steps will make the grader happy. Please be patient, I'm writing this up very quickly and might make a bit of a mistake that I'll correct tonight.
+
