@@ -42,5 +42,30 @@ The TCP ports that I had you open in the instance creation steps will allow you 
 * You can also get another view of the instance by typeing into the browser address bar: http://XX.YY.WW.ZZ:8000/ where XX.YY.WW.ZZ is your public IP address of your instance. This gives you access to Hue.
 
 ## The Big Data Assignment on Hortonworks
-I've needed to re-write the assignment a bit to get it to work on this other VM. I've verified that the output of this set of steps will make the grader happy. Please be patient, I'm writing this up very quickly and might make a bit of a mistake that I'll correct tonight.
+I've needed to re-write the assignment a bit to get it to work on this other VM. I've verified that the output of this set of steps will make the grader happy. Please be patient, I'm writing this up very quickly and might make a bit of a mistake that I'll correct tonight. The step numbers below are one-to-one match to the assignment steps
 
+1. Open the terminal (this is done on Windows using PuTTY as details in my steps above)
+1. once you login (root with password hadoop) stay right where you are. Dont change directories
+1. you will need the source file for the WordCount.java for this (and following steps). You can download this directly from the terminal by typeing the following: wget https://raw.githubusercontent.com/pmPartch/MapReduce-tutorial/master/WordCount.java
+  1. you will need to compile. So follow these steps
+  2. assuming you are in your login default directory (if not sure, type cd). Type the following commands in the termial and press enter for each line.
+  3. mkdir build
+  4. export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar
+  5. hadoop com.sun.tools.javac.Main WordCount.java -d build
+  6. jar -cvf WordCount.jar -C build/ ./
+  7. test the result (as in the assignment and note change in case) by typeing: hadoop jar WordCount.jar WordCount
+ 1. same as original instruction
+ 2. create two files in your current directory (no need to with them elsewhere):
+   1.  echo "Hello world in HDFS" > testfile1
+   2.  echo "Hadoop word count example in HDFS" > testfile2
+ 1. create a directory for the input to MapReduce on HDFS by typing (_either_ of the folloing will work)
+   1. hdfs dfs -mkdir -p testmr/input
+   2. hadoop fs -mkdir -p testmr/input
+ 1. copy these two files to HDFS by typing (either of the next lines will work)
+   1. hdfs dfs -put testfile* testmr/input
+   2. hadoop fs -put testfile* testmr/input
+ 1. run the MapReduce program on the input files: hadoop jar WordCount.jar wordcount testmr/input testmr/output
+ 2. if successful, you can list the output files: hdfs dfs -ls testmr/output
+ 3. check the output: hdfs dfs -cat testmr/output/part*
+ 4. put the output in a location. Now we will do this using the browser interface, since we need to get this part* file off the HDFS and onto your local machine. So follow these steps:
+   1. 
