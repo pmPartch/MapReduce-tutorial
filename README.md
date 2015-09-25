@@ -68,4 +68,7 @@ I've needed to re-write the assignment a bit to get it to work on this other VM.
 2. if successful, you can list the output files: hdfs dfs -ls testmr/output
 3. check the output: hdfs dfs -cat testmr/output/part*
 4. put the output in a location. Now we will do this using the browser interface, since we need to get this part* file off the HDFS and onto your local machine. So follow these steps:
-  * xxx 
+  1. type this into your address bar: http://XX.YY.WW.ZZ:8888/ where XX.YY.WW.ZZ is your public IP. Your user/pswd is admin/admin
+  2. in the upper right corner of the page is a Admin button and to the left of this is a litte box-like icon. Hover your mouse over this box icon and select HDFS files.
+  3. You should see a folder named testmr, open it. Under this folder should be an output folder that contains a file named part-r-00000. down load this file to your local computer (there is a download link on the right side of the page on the same line as the file.
+  4. use this file to upload to your coursea submission page.
