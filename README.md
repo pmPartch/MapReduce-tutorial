@@ -24,7 +24,9 @@ This is a modified tutorial for Hortonworks AMI on Amazon Web Services for a ver
 * You will be asked for a key pair. This configuration does not make use of key pairs so select proceed without a key pair and check the check box and press Launch Intances.
 * You can press the View Instances button and wait for the status checks to read 2/2 (there is a refresh button on upper right of page). This takes a few minutes. While we wait...this instance is backed by EBS (so when you shutdown it will keep any data you save on storage). Note that if, instead of shut down, you terminate then the data will be lost.
 * once the status checks have changed to 2/2 you can now logon (see next steps)...but before you go, you will need to copy the public IP address of the instance. So go back to the EC2 page (if you ever get lost, just press the oragne cube in the upper left of the page and this will get you back to the management console). From the EC2 page, click on the Instances under the Instances category. Select your running instance and in the lower pane should be your public IP address. Copy this since you will need it more than a few time in the instructions below.
-_WARNING_ remember that as long as your instance is running, it is costing you. So alwasy shut it down when you are done with playing around...don't leave it running (say, overnight). There are email alerts and auto shutdown proceedures that you can put into place, but I have not the time to describe them now. Later...
+
+__WARNING__ remember that as long as your instance is running, it is costing you. So alwasy shut it down when you are done with playing around...don't leave it running (say, overnight). There are email alerts and auto shutdown proceedures that you can put into place, but I have not the time to describe them now. 
+
 ## Connecting with cloud VM
 These instructions are for Windows users (I'll add details for Mac/Linux ASAP).
 * To access the VM from windows, you will need an SSH client such as the free PuTTY. Download it from http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
