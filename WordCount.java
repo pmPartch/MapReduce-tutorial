@@ -41,8 +41,8 @@ public class WordCount {
 
         if (args.length < 2)
         {
-            println("Usage: WordCount <in> <out>");
-            return;
+            System.err.println("Usage: WordCount <in> <out>");
+            System.exit(1);
         }
         
         Job job = Job.getInstance(new Configuration(), "wordcount");
