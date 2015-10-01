@@ -30,9 +30,15 @@ __WARNING__ remember that as long as your instance is running, it is costing you
 __NOTE__ how to shut down the instance when you are done (this does not terminate the instance, but meanly powers it down). There are a couple of ways to do this. One from the terminal (just type poweroff and press enter) and the other from the AWS management console where you navigate to the EC2/instances, right mouse click on your instance and select Instance State/Stop.
 
 ## Connecting with cloud VM with the terminal
-These instructions are for Windows users (I'll add details for Mac/Linux ASAP).
+*For Windows Users*
 * To access the VM from windows, you will need an SSH client such as the free PuTTY. Download it from http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 * Run PuTTY and enter the instance public IP into the Host Name edit box. Leave the port 22. Press Open button and you will be shown the terminal for login. Your login name is root and password is hadoop (you will probably be shown a warning dialog, press Yes to shut it down)
+
+*For OSX/Linux Users*
+You should already have an SSH client installed. So follow these steps:
+* Start a terminal
+* type the following (where XX.YY.WW.ZZ is the public IP of your cloud instance. You will be asked for your password: hadoop): ssh root@XX.YY.WW.ZZ
+
 *NOTE*: you will need this terminal to compile and run the WordCount MapReduce program so leave it open
 
 ## Connecting with the cloud VM with the browser
